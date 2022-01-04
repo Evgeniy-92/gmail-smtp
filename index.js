@@ -4,8 +4,8 @@ const app = express()
 const cors = require('cors')
 const bodyParser = require('body-parser')
 let port = process.env.PORT || 3010
-let smtp_login = process.env.SMTP_LOGIN
-let smtp_password = process.env.SMTP_PASSWORD
+let smtp_login = process.env.SMTP_LOGIN || "---"
+let smtp_password = process.env.SMTP_PASSWORD || "---"
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
